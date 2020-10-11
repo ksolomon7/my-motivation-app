@@ -9,7 +9,9 @@ body {
 
 .header{
   font: Helvetica;
+  font-size: large;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

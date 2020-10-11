@@ -11,7 +11,11 @@ class Header extends React.Component{
 
 export default Header
 
-// functional component
+
+
+
+
+// Note: functional component
 // function Header(props){ 
 //     return(
 //             <h1 className="header">{props.title}</h1>    

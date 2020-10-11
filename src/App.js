@@ -1,25 +1,27 @@
 import React from 'react';
-import Header from './Header'
-import Author from './Author'
+import Header from './Header';
+import AuthorContainer from './AuthorContainer'
+import arrayOfAuthors from './database'
 import './App.css';
 
 class App extends React.Component{
 
   state={
-    authors: ["Mark Twain", "Michael Jordan", "Babe Ruth"]
+    authors: arrayOfAuthors
   }
-
 
   render(){
   return (
     <div className="App">
-      <Header title="Welcome to Your Motivational Quotes"/>
-      <hr/>
-      {this.state.authors.map((author,index)=> {
-        return <Author key={index} author={author}/>
-      })}
+      <Header title="Your Motivational Quotes"/>
+      < AuthorContainer authors={this.state.authors} />
     </div>
   )};
 }
 
 export default App;
+
+
+  // set{this.state.authors.map((author=> {
+  //   return <Author key={author.id} author={author.authorName}/>
+  // })}
