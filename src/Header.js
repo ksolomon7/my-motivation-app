@@ -1,9 +1,19 @@
 import React from 'react'
 
-function Header(props){ 
-    return(
-            <h1>{props.title}</h1>    
+class Header extends React.Component{
+    render(){
+        return(
+            <h1 className="header">{this.props.title} </h1>
         )
+    }
 }
 
+
 export default Header
+
+// functional component
+// function Header(props){ 
+//     return(
+//             <h1 className="header">{props.title}</h1>    
+//         )
+// }

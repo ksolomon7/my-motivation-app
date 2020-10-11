@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      < Header title="Welcome to Your Motivational Quotes"/>
+      <Header title="Welcome to Your Motivational Quotes"/>
       <Author authorName="Mark Twain"/>
       <Author authorName= "Michael Jordan"/>
       <Author authorName="Babe Ruth"/>
