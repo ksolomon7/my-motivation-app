@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import AuthorContainer from './AuthorContainer'
+import Form from './Form'
 import arrayOfAuthors from './database'
 import './App.css';
 
@@ -14,6 +15,7 @@ class App extends React.Component{
   return (
     <div className="App">
       <Header title="Your Motivational Quotes"/>
+      <Form />
       < AuthorContainer authors={this.state.authors} />
     </div>
   )};
