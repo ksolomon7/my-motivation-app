@@ -1,22 +1,18 @@
 import React from 'react'
-
 import Author from './Author'
 
-class AuthorContainer extends React.Component{
+function AuthorContainer(props){
     
-    arrayOfComponents=this.props.authors.map((singularAuthor)=>{
-            return <div>
-                <Author key={singularAuthor.id} author={singularAuthor.authorName} quote={singularAuthor.quote} motivationRate={singularAuthor.motivationRate}/>
-            </div>
-   })
-    
-    render(){
+    let arrayOfComponents=props.authors.map((singularAuthor)=>{
+            return <Author key={singularAuthor.id} author={singularAuthor.authorName} quote={singularAuthor.quote} motivationRate={singularAuthor.motivationRate}/>
+            })
+ 
         return(
             <ul>
-                {this.arrayOfComponents}
+                {arrayOfComponents}
             </ul>
         )
-    }
+
 }
 
 export default AuthorContainer

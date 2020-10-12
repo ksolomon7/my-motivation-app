@@ -11,11 +11,15 @@ class App extends React.Component{
     authors: arrayOfAuthors
   }
 
+  submitForm=(info)=>{
+    console.log(info)
+  }
+
   render(){
   return (
     <div className="App">
       <Header title="Your Motivational Quotes"/>
-      <Form />
+      <Form submitForm={this.submitForm}/>
       < AuthorContainer authors={this.state.authors} />
     </div>
   )};
