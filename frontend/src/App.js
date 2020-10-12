@@ -10,19 +10,25 @@ class App extends React.Component{
     authors: []
   }
 
-  submitForm=(info)=>{
-    console.log(info)
+  addAuthorToState=(newlyCreatedAuthor)=>{
+   
   }
 
   componentDidMount(){
    fetch("http://localhost:3000/authors")
+   .then(resp=>resp.json())
+   .then(arrayOfAuthors=>{
+     this.setState({
+       authors: arrayOfAuthors
+     })
+   })
   }
 
   render(){
   return (
     <div className="App">
       < Header title="Your Motivational Quotes"/>
-      < Form submitForm={this.submitForm}/>
+      < Form submitForm={this.addAuthorToState}/>
       < AuthorContainer authors={this.state.authors} />
     </div>
   )};

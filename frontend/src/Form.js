@@ -22,7 +22,21 @@ class Form extends React.Component{
     // up to the parent
     handleSubmit=(evt)=>{
         evt.preventDefault()
-        this.props.submitForm(this.state)
+        fetch("http://localhost:3000/authors",{
+            method:"POST",
+            headers:{
+                "Content-Type":"Application/json"
+            },
+            body:JSON.stringify({
+                authorName:this.state.authorName,
+                quote: this.state.quote,
+                motivationRate: this.state.motivationRate
+            })
+        })
+        .then(resp=>resp.json())
+        .then(newAuthor=>{
+            console.log(this.props)
+        })
     }
 
 
